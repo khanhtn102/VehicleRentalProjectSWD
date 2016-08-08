@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<table id="listBrand" class="table">
+    <thead>
+        <tr>
+            <th><label>ID</label></th>
+            <th><label>Name</label></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+
+@section Scripts{
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            getListBrand();
+        });
+
+        function getListBrand() {
+            $.ajax({
+                url: '/Brand/GetList/',
+                type: 'GET',
+                dataType: 'json',
+                success: function (data) {
+                    var rows = '';
+                    $.each(data, function (i, item) {
+                        rows += "<tr>"
+                        rows += "<td>" + item.Id + "</td>"
+                        rows += "<td>" + item.BrandName + "</td>"
+                        rows += "<td><button type='button' id='btnEdit' class='btn btn-default' onclick='return getDetailBook(" + item.Id + ")'>Edit</button> <button type='button' id='btnDelete' class='btn btn-danger' onclick='return deleteBook(" + item.Id + ")'>Delete</button></td>"
+                        rows += "</tr>";
+                        $("#listBrand tbody").html(rows);
+                    });
+                },
+                error: function (err) {
+                    alert("Error: " + err.responseText);
+                }
+            });
+        }
+
+    </script>
+
+}
+

@@ -1,0 +1,11 @@
+c:\users\khanhtn\documents\visual studio 2015\Projects\VehicleRental\VehicleRental.Service\bin\Debug\VehicleRental.Service.dll
+c:\users\khanhtn\documents\visual studio 2015\Projects\VehicleRental\VehicleRental.Service\bin\Debug\VehicleRental.Service.pdb
+c:\users\khanhtn\documents\visual studio 2015\Projects\VehicleRental\VehicleRental.Service\bin\Debug\VehicleRental.Model.dll
+c:\users\khanhtn\documents\visual studio 2015\Projects\VehicleRental\VehicleRental.Service\bin\Debug\VehicleRental.Repository.dll
+c:\users\khanhtn\documents\visual studio 2015\Projects\VehicleRental\VehicleRental.Service\bin\Debug\EntityFramework.dll
+c:\users\khanhtn\documents\visual studio 2015\Projects\VehicleRental\VehicleRental.Service\bin\Debug\VehicleRental.Model.pdb
+c:\users\khanhtn\documents\visual studio 2015\Projects\VehicleRental\VehicleRental.Service\bin\Debug\VehicleRental.Repository.pdb
+c:\users\khanhtn\documents\visual studio 2015\Projects\VehicleRental\VehicleRental.Service\bin\Debug\EntityFramework.xml
+c:\users\khanhtn\documents\visual studio 2015\Projects\VehicleRental\VehicleRental.Service\obj\Debug\VehicleRental.Service.csprojResolveAssemblyReference.cache
+c:\users\khanhtn\documents\visual studio 2015\Projects\VehicleRental\VehicleRental.Service\obj\Debug\VehicleRental.Service.dll
+c:\users\khanhtn\documents\visual studio 2015\Projects\VehicleRental\VehicleRental.Service\obj\Debug\VehicleRental.Service.pdb

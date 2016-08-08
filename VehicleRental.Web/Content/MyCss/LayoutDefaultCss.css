@@ -1,0 +1,49 @@
+﻿#menubar{
+ 
+}
+
+#btnDangNhap{
+    float:right;
+    border: 2px solid #4CAF50;
+}
+
+#btnDangNhap:hover{
+    background-color:#4CAF50; /*màu xanh green*/
+    color:white;
+    transition-duration:0.3s;
+}
+
+#btnDangKy{
+    border:none;
+}
+
+#btnDangKy:hover{
+    background-color:white;
+}
+
+#btnHonda{
+    border: 2px solid #4CAF50;
+    color:#4CAF50;
+}
+
+#btnHonda:hover{
+    background-color:#4CAF50; /*màu xanh green*/
+    color:white;
+    transition-duration:0.3s;
+}
+
+#btnCar{
+    border: 2px solid #4CAF50;
+    color:#4CAF50;
+}
+
+#btnCar:hover{
+    background-color:#4CAF50; /*màu xanh green*/
+    color:white;
+    transition-duration:0.3s;
+}
+
+#btnCancle:hover{
+    background-color:#b3b3b3;
+    color:white;
+}
