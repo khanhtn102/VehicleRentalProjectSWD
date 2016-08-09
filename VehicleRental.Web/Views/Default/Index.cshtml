@@ -1,5 +1,24 @@
-﻿
+﻿@using VehicleRental.Web.Models
+@model LoginViewModel
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Trang chủ";
     Layout = "~/Views/MyLayout/LayoutDefault.cshtml";
 }
+<script>
+    function Login() {
+        var formData = new FormData(document.getElementById('LoginForm'));
+        //formData.append("Username")
+        $.ajax({
+            type: "POST",
+            url: "@Url.Action("Login", "Account")",
+            data: formData,
+            async: false,
+            cache: false,
+            contentType: false,
+            processData: false,
+        success: function (result) {
+                
+            }
+    });
+    }
+</script>

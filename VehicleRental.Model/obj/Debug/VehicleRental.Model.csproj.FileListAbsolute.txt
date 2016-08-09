@@ -8,3 +8,13 @@ c:\users\khanhtn\documents\visual studio 2015\Projects\VehicleRental\VehicleRent
 c:\users\khanhtn\documents\visual studio 2015\Projects\VehicleRental\VehicleRental.Model\obj\Debug\VehicleRental.Model.csprojResolveAssemblyReference.cache
 c:\users\khanhtn\documents\visual studio 2015\Projects\VehicleRental\VehicleRental.Model\obj\Debug\VehicleRental.Model.dll
 c:\users\khanhtn\documents\visual studio 2015\Projects\VehicleRental\VehicleRental.Model\obj\Debug\VehicleRental.Model.pdb
+C:\Users\Luke Phan\Documents\VehicleRentalProjectSWD\VehicleRental.Model\bin\Debug\VehicleRental.Model.dll.config
+C:\Users\Luke Phan\Documents\VehicleRentalProjectSWD\VehicleRental.Model\bin\Debug\VehicleRental.Model.dll
+C:\Users\Luke Phan\Documents\VehicleRentalProjectSWD\VehicleRental.Model\bin\Debug\VehicleRental.Model.pdb
+C:\Users\Luke Phan\Documents\VehicleRentalProjectSWD\VehicleRental.Model\bin\Debug\EntityFramework.dll
+C:\Users\Luke Phan\Documents\VehicleRentalProjectSWD\VehicleRental.Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Luke Phan\Documents\VehicleRentalProjectSWD\VehicleRental.Model\bin\Debug\EntityFramework.xml
+C:\Users\Luke Phan\Documents\VehicleRentalProjectSWD\VehicleRental.Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Luke Phan\Documents\VehicleRentalProjectSWD\VehicleRental.Model\obj\Debug\VehicleRental.Model.csprojResolveAssemblyReference.cache
+C:\Users\Luke Phan\Documents\VehicleRentalProjectSWD\VehicleRental.Model\obj\Debug\VehicleRental.Model.dll
+C:\Users\Luke Phan\Documents\VehicleRentalProjectSWD\VehicleRental.Model\obj\Debug\VehicleRental.Model.pdb

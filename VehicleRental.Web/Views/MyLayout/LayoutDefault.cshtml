@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-
+@using VehicleRental.Web.Models
+@model LoginViewModel
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
@@ -40,7 +41,7 @@
 
     <!-- Content Honda-->
     <div class="container">
-        <img src="~/Image/vespa.png" class="col-md-4 col-md-offset-4"/>
+        <img src="~/Image/vespa.png" class="col-md-4 col-md-offset-4" />
     </div>
     <div class="container">
         <p class="col-md-6 col-md-offset-3" style="font-size:20px">
@@ -83,35 +84,45 @@
     </div>
 
     <!-- Modal to show Login -->
-    <div class="modal fade" id="loginModal">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">Đăng Nhập</h4>
-                </div>
-                <div class="modal-body">
-                    <div class="form-horizontal">
-                        <div class="form-group">
-                            <div class="col-md-10">
-                                <input type="hidden" class="form-control" id="Id" />
-                                <input type="text" id="Username" class="form-control" placeholder="Tài Khoản"/>
+    <section id="loginForm">
+        @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+            <div class="modal fade" id="loginModal">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Đăng Nhập</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-horizontal">
+                                <div class="form-group">
+                                    @Html.LabelFor(m => m.Username, new { @class = "col-md-2 control-label" })
+                                    <div class="col-md-10">
+                                        <input type="hidden" class="form-control" id="Id" />
+                                        @Html.TextBoxFor(m => m.Username, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(m => m.Username, "", new { @class = "text-danger" })
+                                        @*<input type="text" id="Username" class="form-control" placeholder="Tài Khoản"/>*@
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
+                                    <div class="col-md-10">
+                                        @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                                        @*<input type="password" id="Password" class="form-control" placeholder="Mật Khẩu" />*@
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <div class="col-md-10">
-                                <input type="password" id="Password" class="form-control" placeholder="Mật Khẩu"/>
-                            </div>
+                        <div class="modal-footer">
+                            <button type="button" id="btnCancle" class="btn btn-default" data-dismiss="modal">Thoát</button>
+                            <button type="submit" id="btnLogin" class="btn btn-success">Đăng Nhập</button>
                         </div>
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" id="btnCancle" class="btn btn-default" data-dismiss="modal">Thoát</button>
-                    <button type="button" id="btnLogin" class="btn btn-success">Đăng Nhập</button>
-                </div>
             </div>
-        </div>
-    </div>
-
+        }
+    </section>
     <div>
         @RenderBody()
     </div>

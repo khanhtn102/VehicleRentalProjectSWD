@@ -261,14 +261,6 @@
         <Association Name="FK_Order_Vehicle">
           <End Role="Vehicle" Type="Self.Vehicle" Multiplicity="1" />
           <End Role="Order" Type="Self.Order" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Vehicle">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Order">
-              <PropertyRef Name="VehicleId" />
-            </Dependent>
-          </ReferentialConstraint>
         </Association>
         <Association Name="FK_Vehicle_User">
           <End Role="User" Type="Self.User" Multiplicity="1" />

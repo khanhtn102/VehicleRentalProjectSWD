@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using VehicleRental.Web.Models;
+using VehicleRental.Service;
 
 namespace VehicleRental.Web.Controllers
 {
@@ -17,7 +18,12 @@ namespace VehicleRental.Web.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
+        IUserService userService;
 
+        public AccountController(IUserService service)
+        {
+            this.userService = service;
+        }
         public AccountController()
         {
         }
@@ -65,7 +71,6 @@ namespace VehicleRental.Web.Controllers
         // POST: /Account/Login
         [HttpPost]
         [AllowAnonymous]
-        [ValidateAntiForgeryToken]
         public async Task<ActionResult> Login(LoginViewModel model, string returnUrl)
         {
             if (!ModelState.IsValid)
@@ -75,20 +80,40 @@ namespace VehicleRental.Web.Controllers
 
             // This doesn't count login failures towards account lockout
             // To enable password failures to trigger account lockout, change to shouldLockout: true
-            var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
-            switch (result)
+            var user = userService.GetAll().FirstOrDefault(x => x.Username.Equals(model.Username) && x.Password.Equals(model.Password));
+            if(user != null)
             {
-                case SignInStatus.Success:
-                    return RedirectToLocal(returnUrl);
-                case SignInStatus.LockedOut:
-                    return View("Lockout");
-                case SignInStatus.RequiresVerification:
-                    return RedirectToAction("SendCode", new { ReturnUrl = returnUrl, RememberMe = model.RememberMe });
-                case SignInStatus.Failure:
-                default:
-                    ModelState.AddModelError("", "Invalid login attempt.");
-                    return View(model);
+                HttpCookie cookie = new HttpCookie("IsRole");
+                if (user.IsAdmin.HasValue)
+                {
+                    returnUrl = this.Url.Action("Index","Admin");
+                    cookie.Value = "Admin";
+                    Response.Cookies.Add(cookie);
+                }
+                else
+                {
+                    returnUrl = this.Url.Action("Index", "User");
+                    cookie.Value = "User";
+                    Response.Cookies.Add(cookie);
+                }
+                return this.Redirect(returnUrl);
             }
+            ModelState.AddModelError("", "Invalid login attempt.");
+            return View(model);
+            //g(model.Email, model.Password, model.RememberMe, shouldLockout: false);
+            //switch (result)
+            //{
+            //    case SignInStatus.Success:
+            //        return RedirectToLocal(returnUrl);
+            //    case SignInStatus.LockedOut:
+            //        return View("Lockout");
+            //    case SignInStatus.RequiresVerification:
+            //        return RedirectToAction("SendCode", new { ReturnUrl = returnUrl, RememberMe = model.RememberMe });
+            //    case SignInStatus.Failure:
+            //    default:
+            //        ModelState.AddModelError("", "Invalid login attempt.");
+            //        return View(model);
+            //}
         }
 
         //

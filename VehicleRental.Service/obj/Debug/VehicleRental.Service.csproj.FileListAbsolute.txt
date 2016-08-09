@@ -9,3 +9,14 @@ c:\users\khanhtn\documents\visual studio 2015\Projects\VehicleRental\VehicleRent
 c:\users\khanhtn\documents\visual studio 2015\Projects\VehicleRental\VehicleRental.Service\obj\Debug\VehicleRental.Service.csprojResolveAssemblyReference.cache
 c:\users\khanhtn\documents\visual studio 2015\Projects\VehicleRental\VehicleRental.Service\obj\Debug\VehicleRental.Service.dll
 c:\users\khanhtn\documents\visual studio 2015\Projects\VehicleRental\VehicleRental.Service\obj\Debug\VehicleRental.Service.pdb
+C:\Users\Luke Phan\Documents\VehicleRentalProjectSWD\VehicleRental.Service\bin\Debug\VehicleRental.Service.dll
+C:\Users\Luke Phan\Documents\VehicleRentalProjectSWD\VehicleRental.Service\bin\Debug\VehicleRental.Service.pdb
+C:\Users\Luke Phan\Documents\VehicleRentalProjectSWD\VehicleRental.Service\bin\Debug\VehicleRental.Model.dll
+C:\Users\Luke Phan\Documents\VehicleRentalProjectSWD\VehicleRental.Service\bin\Debug\VehicleRental.Repository.dll
+C:\Users\Luke Phan\Documents\VehicleRentalProjectSWD\VehicleRental.Service\bin\Debug\EntityFramework.dll
+C:\Users\Luke Phan\Documents\VehicleRentalProjectSWD\VehicleRental.Service\bin\Debug\VehicleRental.Model.pdb
+C:\Users\Luke Phan\Documents\VehicleRentalProjectSWD\VehicleRental.Service\bin\Debug\VehicleRental.Repository.pdb
+C:\Users\Luke Phan\Documents\VehicleRentalProjectSWD\VehicleRental.Service\bin\Debug\EntityFramework.xml
+C:\Users\Luke Phan\Documents\VehicleRentalProjectSWD\VehicleRental.Service\obj\Debug\VehicleRental.Service.csprojResolveAssemblyReference.cache
+C:\Users\Luke Phan\Documents\VehicleRentalProjectSWD\VehicleRental.Service\obj\Debug\VehicleRental.Service.dll
+C:\Users\Luke Phan\Documents\VehicleRentalProjectSWD\VehicleRental.Service\obj\Debug\VehicleRental.Service.pdb
